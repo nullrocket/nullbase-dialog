@@ -1,0 +1,1 @@
+export { default } from 'nullbase-dialog/components/nb-dialog-footer/component';

@@ -1,0 +1,16 @@
+{{#nb-dialog}}
+  {{#nb-dialog-header }}
+    {{bob}}
+  {{/nb-dialog-header}}
+  {{#nb-dialog-body}}
+    <div class="inner-wrapper">
+    {{nb-input  type="text" icon=(build-icon "account" "grey") hintText="joe bobs hint"}}
+    </div>
+  {{/nb-dialog-body}}
+  {{#nb-dialog-footer}}
+
+
+    {{nb-button text="cancel" text-color="#aaa" type="flat-text" on-tap="remove"}}
+    {{nb-button text="ok" type="flat-text"  on-tap="remove"}}
+  {{/nb-dialog-footer}}
+{{/nb-dialog}}
