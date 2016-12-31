@@ -1,5 +1,6 @@
 import Ember from 'ember';
-import getOwner from 'ember-getowner-polyfill';
+
+const {getOwner} = Ember;
 import RouteAction from 'ember-route-action-helper/helpers/route-action';
 
 export default Ember.Route.extend({
