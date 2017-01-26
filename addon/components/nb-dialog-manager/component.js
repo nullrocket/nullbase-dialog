@@ -60,7 +60,7 @@ export default Ember.Component.extend(InboundAction, {
     },
     removeByType: function ( type ) {
 
-      //this.get('reduxStore').dispatch({ type: 'ALLOW_TRANSITIONS' });
+     //this.get('reduxStore').dispatch({ type: 'ALLOW_TRANSITIONS' });
       var dialogToRemove = _.find(this.get('dialogs'), function ( dialog ) {
          console.log('removeByType',dialog.type, type);
         return dialog.type === type;
