@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       this.set('appState.isRightSidebarOpen', !this.get('appState.isRightSidebarOpen'));
     },
     alert(){
-      console.log(arguments);
+    //  console.log(arguments);
     },
     showDialog: function ( dialogComponent, context) {
 
