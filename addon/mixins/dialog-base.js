@@ -22,7 +22,7 @@ export default Ember.Mixin.create(SpreadMixin, {
   },
 
   willDestroy: function () {
-    $('body').off('focusin', self._bodyFocusIn);
+    $('body').off('focusin', this._bodyFocusIn);
     this.get('parentComponent.dialogInstances').removeObject(this);
     this._super(...arguments);
   },
