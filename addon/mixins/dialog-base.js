@@ -22,8 +22,11 @@ export default Ember.Mixin.create(SpreadMixin, {
   },
 
   willDestroy: function () {
-    console.log('will destroy',this);
-    $('body').off('focusin', this._bodyFocusIn);
+    if(this.get('focusTrap'))
+    {
+      this.get('focusTrap').deactivate();
+    }
+
     this.get('parentComponent.dialogInstances').removeObject(this);
     this._super(...arguments);
   },
@@ -63,7 +66,7 @@ export default Ember.Mixin.create(SpreadMixin, {
       this.set('focusTrap',focusTrap);
       focusTrap.activate();
     }
-  },
-  _bodyFocusIn: null,
+  }
+
 
 });
