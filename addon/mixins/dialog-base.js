@@ -46,7 +46,7 @@ export default Ember.Mixin.create(SpreadMixin, {
   },
   actions: {
     remove: function () {
-      console.log('will remove',this);
+
     this.onRemove();
       this.$().removeClass('show');
       this.$('.nb-modal-dialog').removeClass('show');
