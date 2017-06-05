@@ -22,6 +22,7 @@ export default Ember.Mixin.create(SpreadMixin, {
   },
 
   willDestroy: function () {
+    console.log('will destroy',this);
     $('body').off('focusin', this._bodyFocusIn);
     this.get('parentComponent.dialogInstances').removeObject(this);
     this._super(...arguments);
@@ -42,6 +43,7 @@ export default Ember.Mixin.create(SpreadMixin, {
   },
   actions: {
     remove: function () {
+      console.log('will remove',this);
     this.onRemove();
       this.$().removeClass('show');
       this.$('.nb-modal-dialog').removeClass('show');
