@@ -33,6 +33,7 @@ export default Ember.Mixin.create(SpreadMixin, {
   parentComponent: null,
 
   defaultAction: '',
+  escAction:'',
   keyPress: function ( e ) {
     if ( this.get('defaultAction') ) {
       var key = e.which || e.keyCode;
@@ -41,6 +42,15 @@ export default Ember.Mixin.create(SpreadMixin, {
         e.preventDefault();
 
         this.send(this.get('defaultAction'));
+      }
+    }
+    if ( this.get('escAction') ) {
+      var key = e.which || e.keyCode;
+      if ( key === 27 ) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        this.send(this.get('escAction'));
       }
     }
   },
