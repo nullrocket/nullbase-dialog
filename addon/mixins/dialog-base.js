@@ -44,6 +44,9 @@ export default Ember.Mixin.create(SpreadMixin, {
         this.send(this.get('defaultAction'));
       }
     }
+
+  },
+  keyDown: function ( e ) {
     if ( this.get('escAction') ) {
       var key = e.which || e.keyCode;
       if ( key === 27 ) {
