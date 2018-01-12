@@ -7,6 +7,8 @@ import createFocusTrap from "npm:focus-trap";
 export default Ember.Mixin.create(SpreadMixin, {
   classNames: [ 'nb-modal-dialog-backdrop' ],
   classNameBindings: [ 'size' ],
+  attributeBindings:['tabindex'],
+  tabindex:-1,
   size: 'size-1',
   focusTrap:null,
   onRemove(){
