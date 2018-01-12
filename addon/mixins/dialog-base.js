@@ -75,7 +75,7 @@ export default Ember.Mixin.create(SpreadMixin, {
 
       this.$().addClass('show');
       this.$('.nb-modal-dialog').addClass('show');
-      var focusTrap = createFocusTrap(this.$('.nb-modal-dialog').get(0),{initialFocus:'.nb-modal-dialog'});
+      var focusTrap = createFocusTrap(this.$('.nb-modal-dialog').get(0),{initialFocus:'.nb-modal-dialog',escapeDeactivates:false});
       this.set('focusTrap',focusTrap);
       focusTrap.activate();
     }
